@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DigitalClock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="簡易時鐘" Height="450" Width="800" Icon="clock.png" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="182*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="180*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtTime" HorizontalAlignment="Left" Height="127" Margin="73,33,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="641" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txtDate" HorizontalAlignment="Left" Height="77" Margin="73,186,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="417" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txtWeekDay" HorizontalAlignment="Left" Height="77" Margin="97.488,186,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="183" Grid.Column="2"/>
+        <Button x:Name="btnSetAlert" Content="設定鬧鐘" HorizontalAlignment="Left" Margin="60,291,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnCancelAlert" Content="取消鬧鐘" HorizontalAlignment="Left" Margin="156,291,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="cmbHour" HorizontalAlignment="Left" Margin="260,289,0,0" VerticalAlignment="Top" Width="71"/>
+        <ComboBox x:Name="cmbMin" HorizontalAlignment="Left" Margin="9,289,0,0" VerticalAlignment="Top" Width="71" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <MediaElement x:Name="meSound" HorizontalAlignment="Left" Height="123" Margin="97.488,268,0,0" VerticalAlignment="Top" Width="183" Source="alert.wav" Volume="1" Grid.Column="2"/>
+
     </Grid>
 </Window>
